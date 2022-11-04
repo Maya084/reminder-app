@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
 
-  const time = 72000000;
+  const time = 1200000;
   // const time=10000;
   let btn: HTMLButtonElement;
   let interval;
