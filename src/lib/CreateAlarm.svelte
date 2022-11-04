@@ -32,7 +32,7 @@
     new Notification("Look away!", {
       body: "It's time to look away from the screen for 20 seconds",
       vibrate: [200, 100, 200],
-      icon: '/src/assets/eye.png'
+      icon: 'src/assets/eye.png'
     });
   };
 
