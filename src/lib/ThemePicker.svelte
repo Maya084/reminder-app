@@ -1,19 +1,15 @@
-<script lang="ts"></script>
+<script lang="ts">
+    const themes = ["light", "dark", "pink", "mint", "autumn"];
+</script>
 
 <main>
     <form class="color-picker">
         <fieldset>
             <legend class="visually-hidden">Pick a color cheme</legend>
-            <label for="light" class="visually-hidden"> Light </label>
-            <input type="radio" name="theme" id="light" checked />
-            <label for="dark" class="visually-hidden"> Dark </label>
-            <input type="radio" name="theme" id="dark" />
-            <label for="pink" class="visually-hidden"> Pink </label>
-            <input type="radio" name="theme" id="pink" />
-            <label for="mint" class="visually-hidden"> Mint </label>
-            <input type="radio" name="theme" id="mint" />
-            <label for="autumn" class="visually-hidden"> Autumn </label>
-            <input type="radio" name="theme" id="autumn" />
+            {#each themes as theme}
+                <label for={theme} class="visually-hidden"> Light </label>
+                <input type="radio" name="theme" id={theme} checked />
+            {/each}
         </fieldset>
     </form>
 </main>
@@ -72,6 +68,6 @@
         --radio-color: #3eb489;
     }
     input[type="radio"]#autumn {
-        --radio-color: #336B87;
+        --radio-color: #336b87;
     }
 </style>
