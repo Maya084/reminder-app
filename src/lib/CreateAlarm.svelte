@@ -32,7 +32,7 @@
     new Notification("Look away!", {
       body: "It's time to look away from the screen for 20 seconds",
       vibrate: [200, 100, 200],
-      icon: "src/assets/eye.png",
+      icon: "/src/assets/eye.png",
     });
   };
 
@@ -48,8 +48,6 @@
 </script>
 
 <div class="card">
-  <!-- on:click={createAlarm} bind:this={btn} -->
-
   <button class="card-content" on:click={createAlarm} bind:this={btn}
     >Create a reminder</button
   >
@@ -63,7 +61,6 @@
   button:hover:not(:disabled) {
     cursor: pointer;
   }
-
 
   .card {
     background-color: var(--section-bg-color);
