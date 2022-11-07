@@ -59,6 +59,12 @@
   button {
     all: unset;
   }
+
+  button:hover:not(:disabled) {
+    cursor: pointer;
+  }
+
+
   .card {
     background-color: var(--section-bg-color);
     border-radius: 10px;
