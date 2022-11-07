@@ -10,8 +10,10 @@
             <input type="radio" name="theme" id="dark" />
             <label for="pink" class="visually-hidden"> Pink </label>
             <input type="radio" name="theme" id="pink" />
-            <label for="purple" class="visually-hidden"> Purple </label>
-            <input type="radio" name="theme" id="purple" />
+            <label for="mint" class="visually-hidden"> Mint </label>
+            <input type="radio" name="theme" id="mint" />
+            <label for="autumn" class="visually-hidden"> Autumn </label>
+            <input type="radio" name="theme" id="autumn" />
         </fieldset>
     </form>
 </main>
@@ -38,7 +40,7 @@
         border: 0;
         display: flex;
         gap: 3rem;
-        background-color: #f1f1f1;
+        background-color: var(--section-bg-color);
         width: fit-content;
         padding: 1rem 3rem;
         border-radius: 0 0 1rem 1rem;
@@ -58,18 +60,18 @@
     }
 
     input[type="radio"]#light {
-        --radio-color: rgb(243, 230, 232);
+        --radio-color: #fefefe;
     }
     input[type="radio"]#dark {
-        --radio-color: rgb(19, 27, 50);
+        --radio-color: #213547;
     }
     input[type="radio"]#pink {
-        --radio-color: rgb(255, 192, 203);
+        --radio-color: #b15353;
     }
-    input[type="radio"]#purple {
-        --radio-color: rgb(128, 0, 128);
+    input[type="radio"]#mint {
+        --radio-color: #3eb489;
     }
-
-    :root:has(#pink:checked){
+    input[type="radio"]#autumn {
+        --radio-color: #336B87;
     }
 </style>

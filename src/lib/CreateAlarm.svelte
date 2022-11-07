@@ -32,7 +32,7 @@
     new Notification("Look away!", {
       body: "It's time to look away from the screen for 20 seconds",
       vibrate: [200, 100, 200],
-      icon: 'src/assets/eye.png'
+      icon: "src/assets/eye.png",
     });
   };
 
@@ -47,4 +47,54 @@
   });
 </script>
 
-<button on:click={createAlarm} bind:this={btn}>Create a reminder</button>
+<div class="card">
+  <!-- on:click={createAlarm} bind:this={btn} -->
+
+  <button class="card-content" on:click={createAlarm} bind:this={btn}
+    >Create a reminder</button
+  >
+</div>
+
+<style>
+  button {
+    all: unset;
+  }
+  .card {
+    background-color: var(--section-bg-color);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    position: relative;
+
+    /* center */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card-content {
+    background-color: var(--section-bg-color);
+    border-radius: inherit;
+    color: var(--main-color);
+    inset: 1px;
+    position: absolute;
+  }
+
+  .card::before {
+    content: "";
+    inset: 0px;
+    position: absolute;
+    border-radius: inherit;
+    background: linear-gradient(
+      45deg,
+      transparent 5%,
+      var(--accent-color) 50%,
+      transparent 99%
+    );
+    z-index: 0;
+    opacity: 0;
+  }
+  .card:hover::before {
+    opacity: 1;
+  }
+
+</style>
